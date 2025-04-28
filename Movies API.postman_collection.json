@@ -1,0 +1,148 @@
+{
+	"info": {
+		"_postman_id": "45aa11f6-6182-4209-b6d5-5ec2d38df983",
+		"name": "Movies API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:8083/api/movies/rating",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Service-Token",
+						"value": "A29Gm7ABcaiCMcTEfklIpEjf94Q1B7i5OikLhO7p72RUCUsYgiAcXzrrC80ldWi0",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"movieTitle\": \"Avatar\",\r\n    \"userId\": \"test_user\",\r\n    \"rating\":8\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8083/api/movies/rating",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"api",
+						"movies",
+						"rating"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8083/api/movies/list/top-ten",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Service-Token",
+						"value": "A29Gm7ABcaiCMcTEfklIpEjf94Q1B7i5OikLhO7p72RUCUsYgiAcXzrrC80ldWi0",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:8083/api/movies/list/top-ten",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"api",
+						"movies",
+						"list",
+						"top-ten"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8083/api/movies/search/best-picture",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Service-Token",
+						"value": "A29Gm7ABcaiCMcTEfklIpEjf94Q1B7i5OikLhO7p72RUCUsYgiAcXzrrC80ldWi0",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"An American in Paris\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8083/api/movies/search/best-picture",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"api",
+						"movies",
+						"search",
+						"best-picture"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8083/api/movies/rating",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Service-Token",
+						"value": "A29Gm7ABcaiCMcTEfklIpEjf94Q1B7i5OikLhO7p72RUCUsYgiAcXzrrC80ldWi0",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"movieTitle\": \"Avatar\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8083/api/movies/rating",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"api",
+						"movies",
+						"rating"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
