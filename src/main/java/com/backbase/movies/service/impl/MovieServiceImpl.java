@@ -122,14 +122,14 @@ public class MovieServiceImpl implements MovieService {
                 .build();
     }
 
-    private double calculateRatingAverage(List<MovieRating> ratings){
+    protected double calculateRatingAverage(List<MovieRating> ratings){
         return ratings.stream()
                 .mapToDouble(MovieRating::getRating)
                 .average()
                 .orElse(0.0);
     }
 
-    private long parseBoxOfficeValue(OmdbResponse movie) {
+    protected long parseBoxOfficeValue(OmdbResponse movie) {
         final String boxOfficeValue = movie.getBoxOffice();
         if (boxOfficeValue == null || boxOfficeValue.isEmpty() || boxOfficeValue.equalsIgnoreCase("N/A")) {
             return 0;
