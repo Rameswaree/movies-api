@@ -21,7 +21,7 @@ public class OmdbResponse {
     private String country;
     private String language;
     private String type;
-    private String omdbRating;
+    private String imdbRating;
     private String boxOffice;
     private double rating;
 }

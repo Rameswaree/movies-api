@@ -52,7 +52,7 @@ public class MovieServiceImpl implements MovieService {
                     .year(response.getYear())
                     .actors(response.getActors())
                     .country(response.getCountry())
-                    .omdbRating(response.getOmdbRating())
+                    .imdbRating(response.getImdbRating())
                     .boxOffice(response.getBoxOffice())
                     .languages(response.getLanguage())
                     .wonOscar(academyAwards.getWon())

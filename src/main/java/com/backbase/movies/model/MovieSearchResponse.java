@@ -18,7 +18,7 @@ public class MovieSearchResponse {
     private String country;
     private String languages;
     private String type;
-    private String omdbRating;
+    private String imdbRating;
     private String boxOffice;
     private String wonOscar;
 }
