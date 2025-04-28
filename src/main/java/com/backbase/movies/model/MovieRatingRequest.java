@@ -19,8 +19,8 @@ public class MovieRatingRequest {
     @NotNull
     private String userId;
     @NotNull
-    @Min(value = 1, message = "movie rating shouldn't be less than 1")
-    @Max(value = 10, message = "movie rating shouldn't be greater than 10")
+    @Min(value = 1, message = "Movie rating should not be less than 1")
+    @Max(value = 10, message = "Movie rating should not be greater than 10")
     private int rating;
 }
 
