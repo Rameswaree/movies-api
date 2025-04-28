@@ -1,8 +1,9 @@
 {
 	"info": {
-		"_postman_id": "45aa11f6-6182-4209-b6d5-5ec2d38df983",
+		"_postman_id": "d9f44a10-be46-4962-84ff-36f8a7c17f9f",
 		"name": "Movies API",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19438758"
 	},
 	"item": [
 		{
@@ -83,7 +84,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"title\": \"An American in Paris\"\r\n}",
+					"raw": "",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -91,7 +92,7 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:8083/api/movies/search/best-picture",
+					"raw": "localhost:8083/api/movies/search/best-picture/{{title}}",
 					"host": [
 						"localhost"
 					],
@@ -100,7 +101,8 @@
 						"api",
 						"movies",
 						"search",
-						"best-picture"
+						"best-picture",
+						"{{title}}"
 					]
 				}
 			},
@@ -122,7 +124,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"movieTitle\": \"Avatar\"\r\n}",
+					"raw": "",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -130,7 +132,7 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:8083/api/movies/rating",
+					"raw": "localhost:8083/api/movies/rating/{{title}}",
 					"host": [
 						"localhost"
 					],
@@ -138,11 +140,41 @@
 					"path": [
 						"api",
 						"movies",
-						"rating"
+						"rating",
+						"{{title}}"
 					]
 				}
 			},
 			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "title",
+			"value": "Avatar",
+			"type": "string"
 		}
 	]
 }
