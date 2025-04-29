@@ -1,4 +1,9 @@
 # How to Scale
-- Load balancers can be used to ensure that there is high availability when there is high traffic and also when multiple instances of the application is running.
-- While rating a movie, it is possible to have multiple users add ratings to the same movie at the same time. By using queues or kafka, the scaling can be done and this makes it asynchronous.
-- Performing asynchronous calls to call OMDB API is the other option for scalability.
+
+## Problem statement
+When the list of movies increases, fetching the data would be time-consuming. Also, with multiple users accessing the application to rate movies, it can lead to high latency. 
+
+## Solution to scaling
+- Using distributed caches like Redis with appropriate TTL (Time To Live) helps in reducing database load in multi-instance applications, avoiding repeated inserts and this can be mainly used in the scenario where we insert data from the CSV file (a one-time insertion).
+- If the application is going to be deployed on-premise, then using Apache HTTPD as a load balancer will be sufficient. If the deployment is Cloud-Based, then AWS or Kubernetes cluster could be used. With future plans of making this into a microservice application, a Spring Cloud load balancer can also be used to make the microservices communicate with each other. This way, handling the issue with high traffic for multi-instance application is resolved.
+- Currently the application runs synchronously. To make it asynchronous, using queueing system like Kafka helps to resolve the scenario of multiple users adding ratings to the same movie at the same time.

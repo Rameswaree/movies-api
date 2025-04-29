@@ -22,6 +22,7 @@ The provided CSV file was not formatted properly and there were some adjustments
 - At first, the application lists all the Best Pictures from the database AcademyAwards and then calls the OMDB API to fetch the movie details. Based on these, the top ten movies are listed.
 - The user can rate a movie and view rating of movies present in the database.
 - The rating can be given from 1 to 10.
+- When invalid input is provided in the APIs, appropriate exceptions are thrown and this is handled in the application.
 
 
 # How to start

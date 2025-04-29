@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.backbase</groupId>
 	<artifactId>movies-api</artifactId>
-	<version>0.3.0-SNAPSHOT</version>
+	<version>0.4.0-SNAPSHOT</version>
 	<name>movies-api</name>
 	<description>Movies API for Backbase</description>
 
