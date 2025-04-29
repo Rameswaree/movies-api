@@ -28,6 +28,9 @@ import java.util.List;
 import java.util.Locale;
 import java.util.stream.Collectors;
 
+/**
+ * Service class for Movies API
+ */
 @Service
 @AllArgsConstructor
 public class MovieServiceImpl implements MovieService {

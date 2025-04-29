@@ -10,7 +10,7 @@ Movie API Backend Service
 - Opencsv 
 - H2 Database
 - Spring JPA
-- Custom Service Token Interceptor for endpoint Security
+- Custom Service Token Interceptor for endpoint security
 
 # Prerequisite
 The provided CSV file was not formatted properly and there were some adjustments made in the file to make the data loading successful on application startup.

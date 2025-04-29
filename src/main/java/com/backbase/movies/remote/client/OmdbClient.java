@@ -11,6 +11,9 @@ import org.springframework.stereotype.Component;
 import org.springframework.util.Assert;
 import org.springframework.web.client.RestTemplate;
 
+/**
+ * Rest call to OMDB Client (external API)
+ */
 @Component
 @Getter
 @Setter

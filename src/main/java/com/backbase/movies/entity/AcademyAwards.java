@@ -8,6 +8,9 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 import java.util.List;
 
+/**
+ * Entity class for AcademyAwards table
+ */
 @Data
 @Builder
 @Entity

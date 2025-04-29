@@ -14,6 +14,9 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.List;
 
+/**
+ * Rest Controller for Movies API
+ */
 @RestController
 @RequestMapping("/api/movies")
 public class MovieController {

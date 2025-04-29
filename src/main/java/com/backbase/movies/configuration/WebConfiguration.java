@@ -14,6 +14,6 @@ public class WebConfiguration implements WebMvcConfigurer {
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(serviceTokenInterceptor)
-                .addPathPatterns("/**"); // apply to all endpoints (or specify paths if needed)
+                .addPathPatterns("/**");
     }
 }

@@ -19,6 +19,9 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Loads Academy Awards data from a CSV file to the database on application startup.
+ */
 @Component
 @AllArgsConstructor
 public class AcademyAwardsDataLoader {

@@ -4,6 +4,9 @@ import lombok.*;
 
 import javax.persistence.*;
 
+/**
+ * Entity class for movie_ratings table
+ */
 @Getter
 @Setter
 @Builder

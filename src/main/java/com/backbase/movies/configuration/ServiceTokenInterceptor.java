@@ -9,6 +9,9 @@ import org.springframework.web.servlet.HandlerInterceptor;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+/**
+ * Custom service token interceptor for endpoint security
+ */
 @Component
 @Setter
 @Getter
