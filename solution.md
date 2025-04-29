@@ -14,8 +14,8 @@ Movie API Backend Service
 
 # Solution
 - The application first persists all the Academy Awards data into H2 Database on startup.
-- When the user wants to search best movie by title then it calls OMDB API and then check if it is movie is present in our table. If it is present, then the details are displayed with both OMDB ratings as well as our own ratings. 
-- The user can also search for top ten best movies on the basis of Box Office revenue.
+- When the user wants to search best movie by title then it calls OMDB API and then checks if the movie is present in our table. If it is present, then the details are displayed with both OMDB ratings and our own ratings. 
+- The user can also search for the ten top-rated movies on the basis of box office revenue.
 - At first, the application lists all the Best Pictures from the database AcademyAwards and then calls the OMDB API to fetch the movie details. Based on these, the top ten movies are listed.
 - The user can rate a movie and view rating of movies present in the database.
 - The rating can be given from 1 to 10.
