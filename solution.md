@@ -12,6 +12,9 @@ Movie API Backend Service
 - Spring JPA
 - Custom Service Token Interceptor for endpoint Security
 
+# Prerequisite
+The provided CSV file was not formatted properly and there were some adjustments made in the file to make the data loading successful on application startup.
+
 # Solution
 - The application first persists all the Academy Awards data into H2 Database on startup.
 - When the user wants to search best movie by title then it calls OMDB API and then checks if the movie is present in our table. If it is present, then the details are displayed with both OMDB ratings and our own ratings. 

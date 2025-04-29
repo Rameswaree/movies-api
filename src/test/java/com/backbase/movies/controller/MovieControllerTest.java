@@ -48,14 +48,11 @@ public class MovieControllerTest {
 
     @Test
     public void searchValidTitle_ReturnsOkResponse() {
-        // Arrange
         MovieSearchResponse expectedResponse = createTestMovieSearchResponse();
         when(movieService.searchMovie(testTitle)).thenReturn(expectedResponse);
 
-        // Act
         ResponseEntity<MovieSearchResponse> response = movieController.search(testTitle);
 
-        // Assert
         assertEquals(OK, response.getStatusCode());
         assertEquals(expectedResponse, response.getBody());
         verify(movieService).searchMovie(testTitle);
@@ -63,14 +60,12 @@ public class MovieControllerTest {
 
     @Test
     public void searchEmptyTitle_ThrowsIllegalArgumentException() {
-        // Act & Assert
         assertThrows(IllegalArgumentException.class, () -> movieController.search(""));
         verifyNoInteractions(movieService);
     }
 
     @Test
     public void listTopTenMovies_ReturnsOkResponseWithMovies() {
-        // Arrange
         OmdbResponse movie1 = new OmdbResponse();
         movie1.setTitle(testTitle);
         movie1.setYear("2010");
@@ -86,10 +81,8 @@ public class MovieControllerTest {
         List<OmdbResponse> expectedMovies = Arrays.asList(movie1, movie2);
         when(movieService.listTopTenMovies()).thenReturn(expectedMovies);
 
-        // Act
         ResponseEntity<List<OmdbResponse>> response = movieController.listTopTenMovies();
 
-        // Assert
         assertEquals(OK, response.getStatusCode());
         assertEquals(expectedMovies, response.getBody());
         verify(movieService).listTopTenMovies();
@@ -97,39 +90,31 @@ public class MovieControllerTest {
 
     @Test
     public void rateMovieValidRequest_ReturnsNoContent() throws MovieServiceException {
-        // Arrange
         MovieRatingRequest request = new MovieRatingRequest(testTitle, userId, rating);
 
-        // Act
         ResponseEntity<Void> response = movieController.rateMovie(request);
 
-        // Assert
         assertEquals(NO_CONTENT, response.getStatusCode());
         verify(movieService).rateMovie(testTitle, userId, rating);
     }
 
     @Test
     public void rateMovie_ServiceThrowsException() throws MovieServiceException {
-        // Arrange
         MovieRatingRequest request = new MovieRatingRequest(testTitle, userId, rating);
         doThrow(new MovieServiceException("Error")).when(movieService).rateMovie(testTitle, userId, rating);
 
-        // Act & Assert
         assertThrows(MovieServiceException.class, () -> movieController.rateMovie(request));
         verify(movieService).rateMovie(testTitle, userId, rating);
     }
 
     @Test
     public void getMovieRatingForValidTitle_ReturnsOkResponse() {
-        // Arrange
         MovieRatingSearchResponse expectedResponse = new MovieRatingSearchResponse(1L, testTitle, rating);
 
         when(movieService.getAverageRating(testTitle)).thenReturn(expectedResponse);
 
-        // Act
         ResponseEntity<MovieRatingSearchResponse> response = movieController.getMovieRating(testTitle);
 
-        // Assert
         assertEquals(OK, response.getStatusCode());
         assertEquals(expectedResponse, response.getBody());
         verify(movieService).getAverageRating(testTitle);
@@ -137,7 +122,6 @@ public class MovieControllerTest {
 
     @Test
     public void getMovieRatingForEmptyTitle_ThrowsIllegalArgumentException() {
-        // Act & Assert
         assertThrows(IllegalArgumentException.class, () -> movieController.getMovieRating(""));
         verifyNoInteractions(movieService);
     }
