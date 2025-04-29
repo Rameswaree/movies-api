@@ -17,7 +17,7 @@ Movie API Backend Service
 - Service token is a must for using the API end points.
 - When the user wants to search best movie by title first the services calls the OMDB API and then checks if the movie is present in our table. If it is present, then the details are displayed with ratings from OMDB and ratings from users that is stored in our database. 
 - The user can also search for the ten top-rated movies on the basis of box office revenue.
-- At first, the application lists all the Best Pictures from the database AcademyAwards and then calls the OMDB API to fetch the movie details. Based on these, the top ten movies are listed.
+- At first, the application lists all the Best Pictures from the database AcademyAwards and then calls the OMDB API to fetch the movie details. Based on these, the top ten movies are listed. This request can take upto 2 minutes.
 - The user can rate a movie and view rating of movies present in the database.
 - The rating can be given from 1 to 10.
 - When invalid input is provided in the APIs, appropriate exceptions are thrown and this is handled in the application.
